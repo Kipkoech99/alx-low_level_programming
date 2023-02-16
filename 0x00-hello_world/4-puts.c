@@ -2,9 +2,8 @@
 
 
 /**
- * main - Entry point of the program
- *
- * Return value: Always 0 (success)
+ * main - prints exactly "Programming is like building a multilingual puzzle
+ * Return: Always 0 (success)
  */
 
 
