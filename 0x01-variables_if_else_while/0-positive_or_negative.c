@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry point for program
+ * main - Entry point for this program
  * Return: Always 0 (success)
  */
 
@@ -11,7 +11,7 @@ int main(void)
 
 {
 	int n;
-	
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
