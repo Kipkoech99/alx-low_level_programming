@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry point of the program
+ * main - Entry point of this program
  * Return: Always 0 (success)
  */
 
@@ -33,6 +33,4 @@ int main(void)
 	}
 	return (0);
 
-}	
-	
-
+}
