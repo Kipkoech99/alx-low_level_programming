@@ -1,9 +1,10 @@
 #include <stdio.h>
-#include "math.h"
+#include <math.h>
+#include <stdlib.h>
 
 /**
- * main - Prints the largest prime factor of the number
- * Return; Always 0 (success)
+ * main - Prints the largest prime factor of the number 612852475143
+ * Return: Always 0 (success)
  */
 
 int main(void)
