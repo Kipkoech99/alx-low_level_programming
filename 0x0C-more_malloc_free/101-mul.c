@@ -39,8 +39,8 @@ int _strlen(char *s)
  */
 void errors(void)
 {
-	printf("Error\n");exit(98);
-		
+	printf("Error\n");
+	exit(98);
 }
 /**
  * main - multiplies two positive numbers
