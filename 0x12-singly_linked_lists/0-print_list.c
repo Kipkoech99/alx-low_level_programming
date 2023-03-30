@@ -10,17 +10,16 @@
 size_t print_list(const list_t *h)
 {
 	size_t count = 0;
-	const list_t My_struct = h;
 
-	while (My_struct)
+	while (h)
 	{
-		if (My_struct->str)
-			printf("[%d] %s\n", My_struct->len, My_struct->str);
+		if (h->str)
+			printf("[%d] %s\n", h->len, h->str);
 		else
 			printf("[0] (nill)\n");
 
 		count++;
-		My_struct = My_struct->next;
+		h = h->next;
 	}
 	return count;
 }
