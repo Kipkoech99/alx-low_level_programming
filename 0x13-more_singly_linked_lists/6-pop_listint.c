@@ -3,7 +3,7 @@
 /**
  * pop_listint - a function that deletes the head node
  * @head: pointer to the first node
- * Return - Always 0.
+ * Return: Always 0.
  */
 int pop_listint(listint_t **head)
 {
@@ -13,10 +13,10 @@ int pop_listint(listint_t **head)
 		return (0);
 
 	int n = (*head)->n;
-	*temp = (*head);
 
-	*head = (*head)->next;
-	free(temp);
+	temp = (*head)->next;
+	free(head);
+	*head = temp;
 
 	return (n);
 }
