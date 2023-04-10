@@ -9,30 +9,19 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	if (filename == NULL)
-	{
-		return (-1);
-	}
-	FILE *fp;
+	char *buffer;
+	ssize_t fp;
+	ssize_t bytes_read;
+	ssize_t bytes_written;
 
-	fp = fopen("filename", O_RDONLY);
+	fp = open(filename, O_RDONLY);
 	if (fp == -1)
-	{
 		return (0);
-	}
 	buffer = malloc(sizeof(char) * letters);
+	bytes_read = read(fp, buffer, letters);
+	bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
 
-	bytes_read = fread(buffer, letters, fp);
-	if (bytes_read == -1)
-	{
-		return (0);
-	}
-	bytes_written = fwrite(bytes_read, buffer, STDOUT_FILENO);
-	if (bytes_written == -1)
-	{
-		return (0);
-	}
 	free(buffer);
-	fclose(fp);
+	close(fp);
 	return (bytes_written);
 }
