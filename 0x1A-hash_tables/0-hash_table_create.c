@@ -1,4 +1,4 @@
-#include "hash_tables_h"
+#include "hash_tables.h"
 
 /**
  * *hash_table_create - function to create a hash table
@@ -9,6 +9,9 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
+	unsigned long int j;
+	hash_table_t *hash_table = NULL;
+
 	if (size <= 0)
 	{
 		return (NULL);
